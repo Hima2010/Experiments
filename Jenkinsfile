@@ -2,10 +2,10 @@ pipeline {
     agent any
     stages {
         stage('preparation') {
-            docker{
-                image 'python:2-alphine'
-            }
             steps {
+                docker{
+                image 'python:2-alphine'
+                }
                 sh 'python hello.py'
             }
         }
