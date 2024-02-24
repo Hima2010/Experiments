@@ -2,7 +2,8 @@ pipeline {
     agent any
     stages {
         stage('preparation') {
-            script {
+            steps{
+                script {
                     // Install Python using shell script
                     sh '''
                         #!/bin/bash
@@ -11,6 +12,7 @@ pipeline {
                         python3 hello.py
                     '''
                 }
+            }
         }
         stage('Build') {
             steps {
