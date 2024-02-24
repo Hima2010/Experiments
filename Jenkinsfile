@@ -2,8 +2,11 @@ pipeline {
     agent any
     stages {
         stage('preparation') {
+            docker{
+                image 'python:2-alphine'
+            }
             steps {
-                python3 hello.py
+                sh 'python hello.py'
             }
         }
         stage('Build') {
