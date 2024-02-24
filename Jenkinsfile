@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent NONE
     stages {
         stage('preparation') {
             steps{
