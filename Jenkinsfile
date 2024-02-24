@@ -1,25 +1,15 @@
 pipeline {
     "agent any"
     stages {
-        stage('Install Python') {
+        stage('start') {
             steps {
-                script {
-                    // Install Python using shell script
-                    sh '''
-                        #!/bin/bash
-                        sudo apt update
-                        sudo apt install -y python3
-                    '''
-                }
+                echo "starting"
             }
         }
         
-        stage('Run Python Class') {
+        stage('Build') {
             steps {
-                script {
-                    // Run the Python class
-                    sh 'python3 hello.py'
-                }
+                echo "build"
             }
         }
         stage('Test') {
