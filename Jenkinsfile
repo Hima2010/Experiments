@@ -6,9 +6,9 @@ node {
         python hello.py
     }
     stage('Test') {
-        ech "this is from test stage"
+        ech "this is from Test stage"
     }
     stage('Deploy') {
-        echo "this is from deploy stage"
+        echo "this is from Deploy stage"
     }
 }
