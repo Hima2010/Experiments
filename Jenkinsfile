@@ -3,10 +3,11 @@ pipeline {
     stages {
         stage('preparation') {
             steps {
+                python3 hello.py
                 docker{
-                image 'python:2-alphine'
+                    image 'python:2-alphine'
                 }
-                sh 'python hello.py'
+                
             }
         }
         stage('Build') {
