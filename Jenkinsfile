@@ -18,7 +18,7 @@ pipeline {
             steps {
                 script {
                     // Run the Python class
-                    sh 'python3 path/to/your/python/script.py'
+                    sh 'python3 hello.py'
                 }
             }
         }
